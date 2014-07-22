@@ -1,5 +1,7 @@
 def allergies(input)
-  allergens = {"eggs" => 1, "peanuts" => 2, "shellfish" => 4, "strawberries" => 8, "tomatoes" => 16, "chocolate" => 32, "pollen" => 64, "cats" => 128}
+  asc_allergens = {"eggs" => 1, "peanuts" => 2, "shellfish" => 4, "strawberries" => 8, "tomatoes" => 16, "chocolate" => 32, "pollen" => 64, "cats" => 128}
+  allergens = Hash[asc_allergens.to_a.reverse]
+  puts allergens
   # inputs = input.split(" ")
   score = input
   result = []
@@ -13,4 +15,4 @@ def allergies(input)
   result
 end
 
-puts allergies(3)
+puts allergies(20)
